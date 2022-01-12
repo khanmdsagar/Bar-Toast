@@ -13,6 +13,8 @@
     <button id="infoToastButton">Info</button>
     <button id="warningToastButton">Warning</button>
 
+    <div id="myContainer" style="position: relative; width:500px; height: 300px; background-color: antiquewhite;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit adipisci quisquam quasi voluptas placeat saepe cumque iste dolore perspiciatis nostrum, ipsa incidunt praesentium harum est quaerat fuga voluptate illum facilis!</div>
+
     <script src="app.js"></script>
     <script>
         let successToastButton = document.getElementById('successToastButton')
@@ -23,36 +25,28 @@
         successToastButton.addEventListener('click', function(){
             barToast.success({
                 text: 'Registration Successful',
-                position: 'bottom'
+                parent: 'myContainer'
             })
         })
 
         errorToastButton.addEventListener('click', function(){
             barToast.error({
-                text: 'Hello World!', 
-                bgColor: '#5C5C5C', 
-                color: '#ffffff',
-                position: 'bottom'
+                text: 'Failed to login',
+                parent: 'myContainer'
             })
         })
 
         warningToastButton.addEventListener('click', function(){
-            //let barToast = new barToast()
             barToast.warning({
-                text: 'Hello World!', 
-                bgColor: '#5C5C5C', 
-                color: '#ffffff',
-                position: 'bottom'
+                text: 'Too many login attempts',
+                parent: 'myContainer'
             })
         })
 
         infoToastButton.addEventListener('click', function(){
-            //let barToast = new barToast()
             barToast.info({
-                text: 'Hello World!', 
-                bgColor: '#5C5C5C', 
-                color: '#ffffff',
-                position: 'bottom'
+                text: 'Verification code 4567',
+                parent: 'myContainer'
             })
         })
     </script>
