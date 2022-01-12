@@ -7,6 +7,54 @@
     <title>Bar Toast</title>
 </head>
 <body>
-    
+
+    <button id="successToastButton">Success</button>
+    <button id="errorToastButton">Error</button>
+    <button id="infoToastButton">Info</button>
+    <button id="warningToastButton">Warning</button>
+
+    <script src="app.js"></script>
+    <script>
+        let successToastButton = document.getElementById('successToastButton')
+        let errorToastButton = document.getElementById('errorToastButton')
+        let infoToastButton = document.getElementById('infoToastButton')
+        let warningToastButton = document.getElementById('warningToastButton')
+
+        successToastButton.addEventListener('click', function(){
+            barToast.success({
+                text: 'Registration Successful',
+                position: 'bottom'
+            })
+        })
+
+        errorToastButton.addEventListener('click', function(){
+            barToast.error({
+                text: 'Hello World!', 
+                bgColor: '#5C5C5C', 
+                color: '#ffffff',
+                position: 'bottom'
+            })
+        })
+
+        warningToastButton.addEventListener('click', function(){
+            //let barToast = new barToast()
+            barToast.warning({
+                text: 'Hello World!', 
+                bgColor: '#5C5C5C', 
+                color: '#ffffff',
+                position: 'bottom'
+            })
+        })
+
+        infoToastButton.addEventListener('click', function(){
+            //let barToast = new barToast()
+            barToast.info({
+                text: 'Hello World!', 
+                bgColor: '#5C5C5C', 
+                color: '#ffffff',
+                position: 'bottom'
+            })
+        })
+    </script>
 </body>
 </html>
